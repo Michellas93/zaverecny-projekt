@@ -1,0 +1,26 @@
+---
+layout: moje-sablona.njk
+title: Seznam kaváren
+css: /css/kavarny.css
+tag: kavarny
+---
+
+<div class="container__coffee">
+  <!--Hlavička stránky-->
+  <h1>Ten nejlepší seznam</h1>
+  <h3>"Pes je jediné stvoření na světě, které nás miluje víc než vy sami sebe.”</h3>
+  <!--Střed stránky-->
+  {% for prispevek in collections.kavarny %}
+
+  <div class="list">
+    <div class="list_coffee">
+      <img class="image__list" src="{{ prispevek.data.image }}" alt="{{alt}}" />
+      <div class="list_text">
+        <h2><a class="artical__h2" href="{{ prispevek.url }}">{{ prispevek.data.title }}</a></h2>
+        <p>{{ prispevek.data.perex | safe| truncate(100) }}</p>
+        <p><a class="artical" href="{{ prispevek.url }}">Více</a></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

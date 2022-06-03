@@ -1,0 +1,36 @@
+---
+layout: moje-sablona.njk
+title: tipy
+css: /css/tipy.css
+tag: tipy
+---
+
+<h1>Tipy na výlety s pejsky</h1>
+<h3>"Dejte štěněti domov a ono vám dá navždy své srdce”</h3>
+<div class="background__tipy">
+  <div class="background__tipy-box">
+    <p>
+      Jak jsem slíbila, dám vám sem pár míst, kam zajet a unavit vaše
+      čtyřnoháče. Netěšte se ale na fotky s Arynkou, když jsem totiž
+      výletovala, ani ve snu by mě nenapadlo, že o tom budu mít vlastní blog, to
+      jen pro vysvětlenou k náhodným google obrázkům.
+    </p>
+  </div>
+  <div class="image__Arya-tipy">
+    {% for prispevek in collections.tipy %}
+    <a class="town" href="{{ prispevek.url }}">
+      <div class="container__tip">
+        <img
+          class="image__Arya-tipy2"
+          src="{{ prispevek.data.image }}"
+          alt=""
+        />
+        <div class="container__tip-text">
+          <p class="container__tip-texttext">{{ prispevek.data.title }}</p>
+          <p>{{ prispevek.data.perex | safe| truncate(100) }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

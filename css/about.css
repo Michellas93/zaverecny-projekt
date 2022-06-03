@@ -1,0 +1,61 @@
+.aboutme {
+  display: flex;
+  background-image: linear-gradient(315deg, #deeaee 20%, #bdcebe 60%);
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.aboutme__container {
+  background-color: white;
+  text-align: center;
+  max-width: 400px;
+  border: 0.5px solid grey;
+  padding: 13px;
+  letter-spacing: 3px;
+  margin: 10px 0 20px 0;
+}
+
+.aboutme__container-text {
+  font-size: 15px;
+}
+
+.aboutme__image {
+  width: 200px;
+  margin: 10px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.artical__instagram {
+  color: #ffaaa5;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 865px) {
+  .aboutme {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  .aboutme__container {
+    flex-direction: row;
+    max-width: 500px;
+    align-items: center;
+    border-radius: 2%;
+    margin-left: 10px;
+    border: 2px solid #558e9e;
+  }
+
+  .aboutme__image {
+    width: 30%;
+    border-radius: 2%;
+    margin: 15px 0 15px 0;
+  }
+
+  .aboutme__container-text {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=about.css.map */

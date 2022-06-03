@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css" />
+    {% if css %}
+      <link rel="stylesheet" href="{{css}}" />
+    {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;0,400;1,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  
+  <header>
+    <!--Menu stránky-->
+    <nav class="menu">
+      <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+      <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
+      
+      <ul class="menu__list">
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === '' }}">
+        <a href="/" class="menu__link">Domů</a>
+        </li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'about' }}">
+          <a href="/about/" class="menu__link">Něco o mně</a>
+        </li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'arya' }}">
+        <a href="/Arya/" class="menu__link">Arya</a>
+        </li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'kavarny' }}">
+          <a href="/kavarny/" class="menu__link">Seznam kaváren</a>
+        </li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'tipy' }}">
+          <a href="/tipy/" class="menu__link">Tipy na výlety</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+  {{ content | safe }}
+  </body>
+
+  <footer class="footer">
+    <h3 class="kontakt">Kontakt</h3>
+    <div class="footer__kontakt">
+      <p>Telefon</p>
+      <p>737 618 730</p>
+    </div>
+    <div class="footer__kontakt-instagram">  
+      <p><a class="footer__link" href="https://www.instagram.com">michellas1</a></p>
+      <p><a class="footer__link" href="https://www.instagram.com/bluestaff.arya/">bluestaff.arya</a></p>
+    </div>
+    <p>2022, Michaela Šimková</p>
+  </footer>
+</html>
